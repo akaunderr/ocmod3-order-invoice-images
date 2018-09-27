@@ -16,7 +16,7 @@ timestamp:
 	find . -exec touch -a -m -t $(datetime) {} \;
 
 makezip:
-	cd "$(src)" && zip -9qrX "../$(bin)/$(zip)" * && cd .. && zip -9qrX "$(bin)/$(zip)" "$(license)"
+	cd "$(src)" && zip -9qrX "../$(bin)/$(zip)" * && cd .. && zip -9qrX "$(bin)/$(zip)" "$(readme)" "$(license)"
 
 clean:
 	@echo Cleaning...
