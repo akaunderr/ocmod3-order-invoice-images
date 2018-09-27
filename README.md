@@ -34,8 +34,8 @@ The extension has been tested with OC 3.0.2.0 only, but should work with other O
 * Admin > Dashboard > [Developer Settings] > [Refresh].
 
 ## Live demo
-* [Front Demo](http://)
-* [Admin Demo](http://)
+* [Admin Demo](http://051c5f20.freevar.com/www/microdata/admin/index.php?route=extension/module/order_invoice_images)
+* [Admin Demo](http://051c5f20.freevar.com/www/microdata/admin/index.php?route=sale/order/invoice&order_id=5) - Order invoice
 
 ## Links
 * [Opencart Marketplace](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=<00000>)
