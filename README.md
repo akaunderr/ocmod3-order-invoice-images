@@ -34,12 +34,12 @@ The extension has been tested with OC 3.0.2.0 only, but should work with other O
 * Admin > Dashboard > [Developer Settings] > [Refresh].
 
 ## Live demo
-* [Admin Demo](http://051c5f20.freevar.com/www/microdata/admin/index.php?route=extension/module/order_invoice_images)
+* [Admin Demo](http://051c5f20.freevar.com/www/microdata/admin/index.php?route=extension/module/order_invoice_images) - Settings
 * [Admin Demo](http://051c5f20.freevar.com/www/microdata/admin/index.php?route=sale/order/invoice&order_id=5) - Order invoice
 
 ## Links
-* [Opencart Marketplace](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=<00000>)
-* [underr.space](https://underr.space/notes/projects/project-<000>.html)
+* [Opencart Marketplace](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=35204)
+* [underr.space](https://underr.space/notes/projects/project-012.html)
 
 ## Donation
 [![Donate me with LiqPay](https://image.ibb.co/nA3HoS/liqpay.png)](https://www.liqpay.ua/en/checkout/card/underr)
