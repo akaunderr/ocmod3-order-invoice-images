@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  * Order Invoice - Images v1.0
+  * Copyright 2018 Burkatskyi Andrii aka underr
+  * Licensed under MIT - https://raw.githubusercontent.com/underr-ua/ocmod3-order-invoice-images/master/LICENSE.txt
+-->
+
+<modification>
+    <name>[underr] Order Invoice - Images</name>
+    <code>order-invoice-images</code>
+    <version>1.0</version>
+    <author>Andrii Burkatskyi aka underr</author>
+    <link>https://github.com/underr-ua/ocmod3-order-invoice-images</link>
+
+    <file error="log" path="admin/controller/sale/order.php">
+        <operation error="log">
+            <search index="0" trim="true"><![CDATA[foreach ($orders as $order_id) {]]></search>
+            <add position="before"><![CDATA[
+        $data['invoice_images_status'] = '';
+        $data['invoice_images_width'] = '';
+
+		if (!empty($this->config->get('module_order_invoice_images_status'))) {
+            $data['invoice_images_status'] = 1;
+			$data['invoice_images_width'] = abs($this->config->get('module_order_invoice_images_width'))
+                ? abs($this->config->get('module_order_invoice_images_width'))
+                : 80;
+		}
+]]>
+            </add>
+        </operation>
+        <operation error="log">
+            <search index="0"><![CDATA[$product_data[] = array(]]></search>
+            <add position="before"><![CDATA[
+					$invoice_image = '';
+
+					if (!empty($this->config->get('module_order_invoice_images_status'))) {
+						$this->load->model('catalog/product');
+						$invoice_image = $this->model_catalog_product->getProduct($product['product_id'])['image'];
+
+						$full_path = array_filter(explode('/', DIR_IMAGE));
+						$image_dir = end($full_path);
+						$invoice_image = '../'. $image_dir . '/' . $invoice_image;
+					}
+
+]]>
+            </add>
+        </operation>
+        <operation error="log">
+            <search index="0"><![CDATA[$product_data[] = array(]]></search>
+            <add position="after"><![CDATA[						'invoice_image'    => $invoice_image,]]></add>
+        </operation>
+    </file>
+
+    <file error="log" path="admin/view/template/sale/order_invoice.twig">
+        <operation error="log">
+            <search><![CDATA[<td><b>{{ column_product }}</b></td>]]></search>
+            <add position="replace"><![CDATA[<td {% if invoice_images_status %}colspan="2"{% endif %}><b>{{ column_product }}</b></td>]]></add>
+        </operation>
+        <operation error="log">
+            <search><![CDATA[<td>{{ product.name }}]]></search>
+            <add position="replace"><![CDATA[{% if invoice_images_status %}
+                                        <td style="width: {{ invoice_images_width + 8 }}px; text-align: center;"><img src="{{ product.invoice_image }}" width="{{ invoice_images_width }}"></td>
+                                    {% endif %}
+                                    <td>{{ product.name }}]]></add>
+        </operation>
+        <operation error="log">
+            <search><![CDATA[<td class="text-right" colspan="4">]]></search>
+            <add position="replace"><![CDATA[<td class="text-right" colspan="{% if invoice_images_status %}5{% else %}4{% endif %}">]]></add>
+        </operation>
+    </file>
+</modification>
