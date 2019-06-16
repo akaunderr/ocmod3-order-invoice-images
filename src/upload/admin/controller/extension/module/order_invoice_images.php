@@ -1,12 +1,22 @@
 <?php
-
-//  * Order Invoice - Images v1.0 - https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=35204
-//  * Copyright 2018 Andrii Burkatskyi aka underr
-//  * Licensed under MIT - https://raw.githubusercontent.com/underr-ua/ocmod3-order-invoice-images/master/LICENSE.txt
-
-
+/**
+ * Order Invoice - Images.
+ *
+ * The Order Invoice - Images extension is for CMS Opencart 3.
+ * It allows to display product images in the order invoice.
+ *
+ * @author		Andrii Burkatskyi aka underr underr.ua@gmail.com
+ * @copyright	Copyright (c) 2019 Andrii Burkatskyi
+ * @license		https://raw.githubusercontent.com/underr-ua/ocmod3-order-invoice-images/master/LICENSE.txt MIT License
+ *
+ * @version		1.1
+ *
+ * @see			https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=35204
+ * @see			https://underr.space/notes/projects/project-012.html
+ * @see			https://github.com/underr-ua/ocmod3-order-invoice-images
+ */
 class ControllerExtensionModuleOrderInvoiceImages extends Controller {
-	private $error = array();
+	private $error = [];
 
 	public function index() {
 		$this->load->language('extension/module/order_invoice_images');
@@ -15,10 +25,10 @@ class ControllerExtensionModuleOrderInvoiceImages extends Controller {
 
 		$this->load->model('setting/setting');
 
-		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
+		if (('POST' == $this->request->server['REQUEST_METHOD']) && $this->validate()) {
 			$this->model_setting_setting->editSetting('module_order_invoice_images', $this->request->post);
 			$this->session->data['success'] = $this->language->get('text_success');
-			$this->response->redirect($this->url->link('marketplace/extension', 'user_token=' . $this->session->data['user_token']  . '&type=module', true));
+			$this->response->redirect($this->url->link('marketplace/extension', 'user_token=' . $this->session->data['user_token'] . '&type=module', true));
 		}
 
 		if (isset($this->error['warning'])) {
@@ -27,22 +37,22 @@ class ControllerExtensionModuleOrderInvoiceImages extends Controller {
 			$data['error_warning'] = '';
 		}
 
-		$data['breadcrumbs'] = array();
+		$data['breadcrumbs'] = [];
 
-		$data['breadcrumbs'][] = array(
+		$data['breadcrumbs'][] = [
 			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/dashboard', 'user_token=' . $this->session->data['user_token'], true)
-		);
+			'href' => $this->url->link('common/dashboard', 'user_token=' . $this->session->data['user_token'], true),
+		];
 
-		$data['breadcrumbs'][] = array(
+		$data['breadcrumbs'][] = [
 			'text' => $this->language->get('text_extension'),
-			'href' => $this->url->link('marketplace/extension', 'user_token=' . $this->session->data['user_token'] . '&type=module', true)
-		);
+			'href' => $this->url->link('marketplace/extension', 'user_token=' . $this->session->data['user_token'] . '&type=module', true),
+		];
 
-		$data['breadcrumbs'][] = array(
+		$data['breadcrumbs'][] = [
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('extension/module/order_invoice_images', 'user_token=' . $this->session->data['user_token'], true)
-		);
+			'href' => $this->url->link('extension/module/order_invoice_images', 'user_token=' . $this->session->data['user_token'], true),
+		];
 
 		$data['action'] = $this->url->link('extension/module/order_invoice_images', 'user_token=' . $this->session->data['user_token'], true);
 

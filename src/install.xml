@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--
-  * Order Invoice - Images v1.0 - https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=35204
-  * Copyright 2018 Burkatskyi Andrii aka underr
-  * Licensed under MIT - https://raw.githubusercontent.com/underr-ua/ocmod3-order-invoice-images/master/LICENSE.txt
--->
+ * Order Invoice - Images.
+ *
+ * The Order Invoice - Images extension is for CMS Opencart 3.
+ * It allows to display product images in the order invoice.
+ *
+ * @author		Andrii Burkatskyi aka underr underr.ua@gmail.com
+ * @copyright	Copyright (c) 2019 Andrii Burkatskyi
+ * @license		https://raw.githubusercontent.com/underr-ua/ocmod3-order-invoice-images/master/LICENSE.txt MIT License
+ *
+ * @version		1.1
+ *
+ * @see			https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=35204
+ * @see			https://underr.space/notes/projects/project-012.html
+ * @see			https://github.com/underr-ua/ocmod3-order-invoice-images
+ -->
 
 <modification>
     <name>[underr] Order Invoice - Images</name>
     <code>order-invoice-images</code>
-    <version>1.0</version>
+    <version>1.1</version>
     <author>Andrii Burkatskyi aka underr</author>
     <link>https://github.com/underr-ua/ocmod3-order-invoice-images</link>
 
@@ -49,6 +59,13 @@
         <operation error="log">
             <search index="0"><![CDATA[$product_data[] = array(]]></search>
             <add position="after"><![CDATA[						'invoice_image'    => $invoice_image,]]></add>
+        </operation>
+
+
+        <operation error="skip">
+            <!--  fix OC 3.0.2.0 error -->
+            <search><![CDATA[$option_weight = '';]]></search>
+            <add position="replace"><![CDATA[$option_weight = 0;]]></add>
         </operation>
     </file>
 

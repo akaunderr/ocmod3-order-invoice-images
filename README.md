@@ -11,6 +11,8 @@ The extension has been tested with OC 3.0.2.0 only, but should work with other O
 * Does not change original files - OCMOD modification.
 
 ## Change log
+* v1.1 (2019.06.16):
+  * Little improvements
 * v1.0 (2018.09.27):
   * First release.
 
@@ -34,8 +36,8 @@ The extension has been tested with OC 3.0.2.0 only, but should work with other O
 * Admin > Dashboard > [Developer Settings] > [Refresh].
 
 ## Live demo
-* [Admin Demo](http://051c5f20.freevar.com/www/microdata/admin/index.php?route=extension/module/order_invoice_images) - Settings
-* [Admin Demo](http://051c5f20.freevar.com/www/microdata/admin/index.php?route=sale/order/invoice&order_id=5) - Order invoice
+* [Admin Demo](http://ocmod.freevar.com/oc3020/b/admin/index.php?route=extension/module/order_invoice_images) - Settings
+* [Admin Demo](http://ocmod.freevar.com/oc3020/b/admin/index.php?route=sale/order/invoice&order_id=1) - Order invoice
 
 ## Links
 * [Opencart Marketplace](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=35204)
@@ -43,3 +45,4 @@ The extension has been tested with OC 3.0.2.0 only, but should work with other O
 
 ## Donation
 [![Donate me with LiqPay](https://image.ibb.co/nA3HoS/liqpay.png)](https://www.liqpay.ua/en/checkout/card/underr)
+[![Donate me with Pateron](https://i.ibb.co/RvTchQm/become-a-patron-button.png)](https://www.patreon.com/underr)
