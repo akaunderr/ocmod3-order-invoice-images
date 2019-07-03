@@ -31,6 +31,7 @@ The extension has been tested with OC 3.0.2.0 only, but should work with other O
 ## How to uninstall
 * Make backup.
 * Open Admin Panel.
+* Admin > Extensions > Extensions > Modules > [underr] Order Invoice - Images > [Uninstall].
 * Admin > Extensions > Extensions > Installer > Install History > find the extension file > [Uninstall].
 * Admin > Extensions > Extensions > Modifications > [Refresh].
 * Admin > Dashboard > [Developer Settings] > [Refresh].
