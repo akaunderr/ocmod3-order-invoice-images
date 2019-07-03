@@ -3,7 +3,7 @@
 ## Description
 The Order Invoice - Images extension is for CMS Opencart 3. It allows to display product images in the order invoice.
 
-The extension has been tested with OC 3.0.2.0 only, but should work with other OC 3.x versions..
+The extension has been tested with OC 3.0.2.0 only, but should work with other OC 3.x versions.
 
 ## Features
 * Allows to display product images in the order invoice.
@@ -19,13 +19,13 @@ The extension has been tested with OC 3.0.2.0 only, but should work with other O
 ## How to install
 * To begin, make backup, really!
 * Open Admin Panel.
-* Admin > Extensions > Extensions > Installer > [Upload]: open the extension file.
-* Admin > Extensions > Extensions > Modifications > [Refresh].
+* Admin > Extensions > Installer > [Upload]: open the extension file.
+* Admin > Extensions > Modifications > [Refresh].
 * Admin > Dashboard > [Developer Settings] > [Refresh].
 
 ## How to configure
-* Admin > Extensions > Extensions > Modules > [underr] Order Invoice - Images > [Install].
-* Admin > Extensions > Extensions > Modules > [underr] Order Invoice - Images > [Edit]:
+* Admin > Extensions > Modules > [underr] Order Invoice - Images > [Install].
+* Admin > Extensions > Modules > [underr] Order Invoice - Images > [Edit]:
   * Set the desired parameters.
 
 ## How to uninstall
