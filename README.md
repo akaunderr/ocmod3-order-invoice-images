@@ -19,7 +19,7 @@ The extension has been tested with OC 3.0.2.0 only, but should work with other O
 ## How to install
 * To begin, make backup, really!
 * Open Admin Panel.
-* Admin > Extensions > Installer > [Upload]: open the extension file.
+* Admin > Extensions > Installer > [Upload]: order-invoice-images.ocmod.zip
 * Admin > Extensions > Modifications > [Refresh].
 * Admin > Dashboard > [Developer Settings] > [Refresh].
 
@@ -32,18 +32,15 @@ The extension has been tested with OC 3.0.2.0 only, but should work with other O
 * Make backup.
 * Open Admin Panel.
 * Admin > Extensions > Extensions > Modules > [underr] Order Invoice - Images > [Uninstall].
-* Admin > Extensions > Extensions > Installer > Install History > find the extension file > [Uninstall].
+* Admin > Extensions > Extensions > Installer > Install History > order-invoice-images.ocmod.zip > [Uninstall].
 * Admin > Extensions > Extensions > Modifications > [Refresh].
 * Admin > Dashboard > [Developer Settings] > [Refresh].
 
 ## Live demo
-* [Admin Demo](http://ocmod.freevar.com/oc3020/b/admin/index.php?route=extension/module/order_invoice_images) - Settings
-* [Admin Demo](http://ocmod.freevar.com/oc3020/b/admin/index.php?route=sale/order/invoice&order_id=1) - Order invoice
+* [Admin (Settings)](http://ocmod.freevar.com/oc3020/b/admin/index.php?route=extension/module/order_invoice_images)
+* [Admin (Invoice example)](http://ocmod.freevar.com/oc3020/b/admin/index.php?route=sale/order/invoice&order_id=1)
 
 ## Links
 * [Opencart Marketplace](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=35204)
-* [underr.space](https://underr.space/notes/projects/project-012.html)
+* [Homepage](https://underr.space/notes/projects/project-012.html)
 
-## Donation
-[![Donate me with LiqPay](https://image.ibb.co/nA3HoS/liqpay.png)](https://www.liqpay.ua/en/checkout/card/underr)
-[![Donate me with Pateron](https://i.ibb.co/RvTchQm/become-a-patron-button.png)](https://www.patreon.com/underr)
